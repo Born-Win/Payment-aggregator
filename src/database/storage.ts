@@ -119,39 +119,8 @@ export class Storage implements OnModuleInit {
     if (process.env.NODE_ENV !== 'production') {
       const partnerToCreate = {
         id: config.get<string>('defaultPartnerId'),
-        paymentCommission: 0.02,
-        holdPercentage: 0.05,
       };
-
       this.create('partners', partnerToCreate);
-
-      this.create('clients', {
-        partnerId: partnerToCreate.id,
-        name: 'My shop',
-        id: 'a6a84180-d',
-        aggregatorCommission: 0.1,
-      });
-      this.create('payments', {
-        id: 'b947f029-e',
-        clientId: 'a6a84180-d',
-        status: PaymentStatus.ACCEPTED,
-        availableAmount: 0,
-        amount: 150,
-      });
-      this.create('payments', {
-        id: 'e000720b-f',
-        clientId: 'a6a84180-d',
-        status: PaymentStatus.ACCEPTED,
-        availableAmount: 0,
-        amount: 1000,
-      });
-      this.create('payments', {
-        id: '46b12409-7',
-        clientId: 'a6a84180-d',
-        status: PaymentStatus.ACCEPTED,
-        availableAmount: 0,
-        amount: 100,
-      });
     }
   }
 }
