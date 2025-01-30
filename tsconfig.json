@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "declaration": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "allowJs": true,
+      "target": "es2022",
+      "sourceMap": true,
+      "outDir": "dist",
+      "sourceRoot": ".",
+      "baseUrl": ".",
+      "paths": {
+        "*": [ "*" ]
+      },
+      "incremental": true,
+      "skipLibCheck": true,
+      "strictNullChecks": false,
+      "noImplicitAny": false,
+      "strictBindCallApply": false,
+      "forceConsistentCasingInFileNames": false,
+      "noFallthroughCasesInSwitch": false,
+      "preserveSymlinks": true
+    },
+    "include": [
+      "src/**/*",
+    ]
+}
